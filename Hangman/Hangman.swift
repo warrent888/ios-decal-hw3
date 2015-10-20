@@ -39,7 +39,6 @@ class Hangman {
         }
         guessedLetters!.addObject(letter)
         var chars = Array(answer!.characters)
-        
         for (var i = 0; i < answer!.characters.count; i += 1) {
             if String(chars[i]) == letter {
                 result = true
@@ -50,9 +49,9 @@ class Hangman {
         }
         return result
     }
-    
+
     func guesses() -> String {
-        if guessedLetters!.count > 0 {
+        if guessedLetters!.count == 0 {
             return ""
         }
         var result: String = guessedLetters!.objectAtIndex(0) as! String
